@@ -1,5 +1,4 @@
-const API_BASE_URL = typeof window !== "undefined" && window.location.port === "5000" ? "/api" : "http://127.0.0.1:5000/api";
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || (typeof window !== "undefined" && window.location.port === "5000" ? "/api" : "http://127.0.0.1:5000/api");
 export async function request(endpoint, options = {}) {
   const url = `${API_BASE_URL}${endpoint}`;
   try {

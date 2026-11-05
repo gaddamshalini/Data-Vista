@@ -113,4 +113,4 @@ if __name__ == "__main__":
     print(f" DATA VISTA API running on http://127.0.0.1:{port}")
     print(f" Relational Database & Analytics Engine Active")
     print(f"=======================================================\n")
-    app.run(host="127.0.0.1", port=port, debug=DEBUG)
+    app.run(host="0.0.0.0", port=port, debug=DEBUG)
